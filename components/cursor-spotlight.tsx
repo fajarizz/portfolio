@@ -24,7 +24,7 @@ export default function CursorSpotlight() {
     }, [sizeMv]);
 
     useEffect(() => {
-        let timeout;
+        let timeout: string | number | NodeJS.Timeout | undefined;
 
         const move = (e: MouseEvent) => {
             const x = e.clientX;
