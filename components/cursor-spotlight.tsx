@@ -13,6 +13,16 @@ export default function CursorSpotlight() {
     const initialSize = overText ? 120 : 60;
     const sizeMv = useMotionValue<number>(initialSize);
 
+    // Initialize CSS variables on mount to ensure no reveal before first mouse move
+    useEffect(() => {
+        // place the mask center off-screen and disable it by default
+        document.documentElement.style.setProperty("--x", "-9999px");
+        document.documentElement.style.setProperty("--y", "-9999px");
+        document.documentElement.style.setProperty("--spotEnabled", "0");
+        // ensure spot size has a sane initial value
+        document.documentElement.style.setProperty("--spotSize", `${sizeMv.get()}px`);
+    }, [sizeMv]);
+
     useEffect(() => {
         let timeout;
 
