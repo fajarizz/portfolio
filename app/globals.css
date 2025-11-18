@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+:root {
+    --background: #e2e1df;
+    --foreground: #171d22;
+}
+
+@font-face {
+    font-family: 'Basheq';
+    src: url('/fonts/basheq.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bemirs';
+    src: url('/fonts/bemirs.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gradzy';
+    src: url('/fonts/gradzy.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Landmark';
+    src: url('/fonts/landmark.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Runtime';
+    src: url('/fonts/runtime.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sarasvati';
+    src: url('/fonts/sarasvati.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sterion';
+    src: url('/fonts/sterion.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Supercharge';
+    src: url('/fonts/supercharge.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tronix';
+    src: url('/fonts/tronix.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Video';
+    src: url('/fonts/video.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+}
+
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*    --background: #0a0a0a;*/
+/*    --foreground: #ededed;*/
+/*  }*/
+/*}*/
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+@keyframes glitchInvertFast {
+    0% { filter: invert(0); }
+    10% { filter: invert(1); }
+    20% { filter: invert(0); }
+    30% { filter: invert(1); }
+    40% { filter: invert(0); }
+    50% { filter: invert(1); }
+    60% { filter: invert(0); }
+    70% { filter: invert(1); }
+    80% { filter: invert(0); }
+    90% { filter: invert(0); }
+    100% { filter: invert(0);}
+}
+
+.glitch-fast {
+    animation: glitchInvertFast 0.25s steps(10) forwards;
+}
+
+
+
+
